@@ -1,0 +1,21 @@
+#include "Bundle_Base.xcconfig"
+
+DEFINES_MODULE = YES
+DYLIB_COMPATIBILITY_VERSION = 1
+DYLIB_CURRENT_VERSION = 1
+DYLIB_INSTALL_NAME_BASE = @rpath
+INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
+VERSION_INFO_PREFIX =
+
+// Disable Signing
+CODE_SIGN_IDENTITY =
+CODE_SIGN_STYLE = Manual
+CODE_SIGNING_ALLOWED = NO
+DEVELOPMENT_TEAM =
+PROVISIONING_PROFILE_SPECIFIER =
+
+// Xcode bug:
+// NOTE - Xcode limitation:
+// "SKIP_INSTALL" needs to be explicitly added directly to the target's build settings.
+// (i.e. it can't be read out of a .xcconfig file)
+SKIP_INSTALL = YES

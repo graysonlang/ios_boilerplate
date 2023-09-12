@@ -1,0 +1,11 @@
+#include "Bundle_Base.xcconfig"
+
+COMBINE_HIDPI_IMAGES = YES
+INFOPLIST_KEY_NSPrincipalClass =
+INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Bundles
+WRAPPER_EXTENSION = bundle
+
+// NOTE - Xcode limitation:
+// "SKIP_INSTALL" needs to be explicitly added directly to the target's build settings.
+// (i.e. it can't be read out of a .xcconfig file)
+SKIP_INSTALL = YES
